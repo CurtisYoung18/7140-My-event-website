@@ -1,0 +1,38 @@
+// DOM Manipulation and Usability Enhancements
+
+// Image Zoom Functionality for gallery.html
+document.addEventListener('DOMContentLoaded', function() {
+    let galleryItems = document.querySelectorAll('.gallery-item img');
+    let modal = document.createElement('div');
+    let modalImage = document.createElement('img');
+    
+    modal.classList.add('image-modal');
+    modalImage.classList.add('modal-img');
+    modal.appendChild(modalImage);
+    document.body.appendChild(modal);
+    
+    galleryItems.forEach(item => {
+        item.addEventListener('click', function() {
+            modalImage.src = item.src;
+            modal.style.display = 'block';
+        });
+    });
+    
+    modal.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+});
+
+
+// Working with JS Objects
+
+let imageDetails = {
+    title: "Random Image",
+    description: "A random image fetched from an external API.",
+    source: "https://picsum.photos/",
+    displayImageDetails: function() {
+        console.log(`Title: ${this.title}, Description: ${this.description}, Source: ${this.source}`);
+    }
+};
+
+imageDetails.displayImageDetails();
