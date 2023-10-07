@@ -1,0 +1,32 @@
+body {
+    background-color: antiquewhite;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    /* This ensures the body takes the full viewport height */
+    }
+
+   h1 {
+    color: blueviolet;
+    font-weight: 300;
+   }
+   
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.home_page1 {
+    width: 300px;
+    height: 40vh;
+    object-fit: cover;
+    margin: 20px 0; 
+    /* This will give some spacing above and below the image */
+}
+
+figcaption {
+    color: grey;
+    font-weight: 100;
+}
