@@ -1,3 +1,4 @@
+/* ensure the body takes the full viewport height */
 body {
     background-color: antiquewhite;
     font-family: 'Poppins', sans-serif;
@@ -5,27 +6,18 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; 
-    /* This ensures the body takes the full viewport height */
     }
 
-   h1 {
-    color: blueviolet;
-    font-weight: 300;
-   }
-   
-body {
-    font-family: 'Poppins', sans-serif;
-}
 
+/* give some spacing above and below the image of the homepage */
 .home_page1 {
     width: 300px;
     height: 40vh;
     object-fit: cover;
     margin: 20px 0; 
-    /* This will give some spacing above and below the image */
 }
 
+/* define the caption of the figure that created the photo */
 figcaption {
     color: grey;
     font-weight: 100;
@@ -77,4 +69,38 @@ nav li a {
 
 nav li a:hover {
     background-color: #eee;
+}
+
+
+
+
+/* define the tilte of index.html*/
+.homepage_title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+/* define the tilte of about.html*/
+.about-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    line-height: 2;
+}
+
+
+/* define the weather style of about.html */
+#weather-info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: rgb(11, 11, 11);   
+    font-weight: 200;   
+    font-size: 2rem;
+    line-height: 0;
 }
