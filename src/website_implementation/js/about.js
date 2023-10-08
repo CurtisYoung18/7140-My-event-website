@@ -30,8 +30,9 @@ fetch(urlWithParams, requestOptions)
         const weather = data.current_weather
         // there is a variable 'temperature' in the url or in the data of 'weather'
         console.log("Current temperature: " + weather.temperature + "°C");
-        document.getElementById('weather-info').textContent = "Current temperature: " + weather.temperature + "°C";
+        const temperature_element = document.getElementById('current_temperature');
+        const windspeed_element = document.getElementById('current_windspeed');
+        temperature_element.innerText = weather.temperature + "°C";
+        windspeed_element.innerText = weather.windspeed + "kph";
   })
   .catch(error => console.log('error', error));
-
-

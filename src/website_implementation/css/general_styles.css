@@ -6,8 +6,36 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
     }
 
+/* create the grid container and define the nav bar*/
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto 1fr;
+}
+
+.brand {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    }
+    
+.page-links {
+    grid-column: 3 / span 2;
+    grid-row: 1;
+    text-align: right;
+}
+
+.main {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 75vw;
+    margin: 0 auto;
+}
 
 /* give some spacing above and below the image of the homepage */
 .home_page1 {
@@ -22,57 +50,6 @@ figcaption {
     color: grey;
     font-weight: 100;
 }
-
-nav {
-    text-align: center;
-    margin: 20px 0;
-}
-
-nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #333;
-    padding: 5px 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-nav a:hover {
-    background-color: #f5f5f5;
-}
-
-/* Resetting some default styles */
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-/* Styling the navigation bar */
-nav {
-    float: right;
-}
-
-nav li {
-    display: inline-block;
-    margin-left: 20px;
-}
-
-nav li a {
-    text-decoration: none;
-    color: black;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-nav li a:hover {
-    background-color: #eee;
-}
-
-
-
 
 /* define the tilte of index.html*/
 .homepage_title {
@@ -91,16 +68,4 @@ nav li a:hover {
     left: 0;
     margin: 0;
     line-height: 2;
-}
-
-
-/* define the weather style of about.html */
-#weather-info {
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: rgb(11, 11, 11);   
-    font-weight: 200;   
-    font-size: 2rem;
-    line-height: 0;
 }
