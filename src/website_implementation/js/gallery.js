@@ -1,3 +1,6 @@
+// Aknowledegment of ChatGpt
+
+
 // DOM Manipulation and Usability Enhancements
 
 // Image Zoom Functionality for gallery.html

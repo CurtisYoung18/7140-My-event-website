@@ -69,3 +69,21 @@ figcaption {
     margin: 0;
     line-height: 2;
 }
+
+/* define the tilte of community.html*/
+.community-title {
+    font-size: 25px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
+
+/* define the tilte of resources.html*/
+.resources-title {
+    font-size: 25px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
