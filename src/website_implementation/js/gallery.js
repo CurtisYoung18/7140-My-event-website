@@ -1,9 +1,23 @@
-// Aknowledegment of ChatGpt
+/* Aknowledegment of ChatGpt
 
+I acknowledge the use of ChatGPT (https://chat.openai.com/) to
+help me perform the functions of zooming photos.
 
-// DOM Manipulation and Usability Enhancements
+The prompts used and the response from ChatGPT are included
+in Appendix 1.
 
-// Image Zoom Functionality for gallery.html
+The output from these prompts was JavaScript codes
+which has the function of zooming images, fetching dynamic contents.
+I only apply the codes related to the zooming function.  
+
+This was used as below.
+
+*/
+
+/*
+DOM Manipulation and Usability Enhancements
+Image Zoom Functionality for gallery.html
+*/
 document.addEventListener('DOMContentLoaded', function() {
     // choose all the images
     let galleryItems = document.querySelectorAll('.gallery-item img');
