@@ -1,4 +1,4 @@
-/* Aknowledegment of ChatGpt
+/* Acknowledegment of ChatGpt
 
 I acknowledge the use of ChatGPT (https://chat.openai.com/) to
 help me perform the functions of zooming photos.

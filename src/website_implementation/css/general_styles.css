@@ -6,84 +6,176 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
     margin: 0;
     padding: 0;
-    height: 100%;
+    height: auto;
     width: 100%;
-    }
-
-/* create the grid container and define the nav bar*/
-.grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto 1fr;
 }
 
-.brand {
-    grid-column: 1 / span 2;
-    grid-row: 1;
-    }
-    
-.page-links {
-    grid-column: 3 / span 2;
-    grid-row: 1;
-    text-align: right;
-}
 
-.main {
-    grid-column: 1 / -1;
-    grid-row: 2;
-    width: 75vw;
-    margin: 0 auto;
-}
-
-/* give some spacing above and below the image of the homepage */
-.home_page1 {
-    width: 300px;
-    height: 40vh;
-    object-fit: cover;
-    margin: 20px 0; 
-}
-
-/* define the caption of the figure that created the photo */
-figcaption {
-    color: grey;
-    font-weight: 100;
-}
-
-/* define the tilte of index.html*/
-.homepage_title {
+/* define the top-nav */
+.top-nav {
+    background-color: #478c48;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 1.5em;
+}
+
+/* define the brand */
+.brand {
+    color: white;
+    margin: auto;
+}
+
+/* define the top right menu bar */
+.menu-right {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+/* define the top-button */
+.top-button {
+    background-color: #eee;
+    border: none;
+    padding: 10px 15px;
+    margin: 2px 0;
+    cursor: pointer;
+    color: #004d40;
+}
+
+/* wrapper for both menu and profiles grids */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 50px;
+}
+
+/* create the profiles grid */
+.grid-container-profiles {
+    width: 50vw;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+/* define the profiles */
+.user-profile {
+    margin: 5px;
+}
+
+/* define the photos used in profiles */
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* define the position of user profiles */
+#user-profile-1 {
+    grid-column: 1 / 6 ;
+    grid-row: 1 / 4;
+}
+
+#user-profile-2 {
+    grid-column: 7 / 12;
+    grid-row: 1 / 4;
+}
+
+#user-profile-3 {
+    grid-column: 1 / 6;
+    grid-row: 4 / 7;
+}
+
+#user-profile-4 {
+    grid-column: 7 / 12;
+    grid-row: 4 / 7;
+}
+
+/* create the menu grid */
+.grid-container-menu-left {
+    width: 20vw;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+/* define the button positions */
+.menu-button:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.menu-button:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.menu-button:nth-child(3) {
+    grid-column: 1;
+    grid-row: 3;
 }
 
 
-/* define the tilte of about.html*/
-.about-title {
-    position: absolute;
-    top: 0;
-    left: 0;
+/* define the button */
+.menu-button {
+    background-color: antiquewhite;
+    border: none;
+    padding: 10px 15px;
     margin: 0;
-    line-height: 2;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 20px;
 }
 
-/* define the tilte of community.html*/
-.community-title {
-    font-size: 25px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 1;
+/* define the icon */
+.menu-button img {
+    height: 100px;
+    width: 100px;
+    margin-right: 10px;
+}    
+
+/* user-story section*/
+.user-stories {
+    grid-column: 1 / 11;
+    grid-row: 7 / 11;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* define the tilte of resources.html*/
-.resources-title {
-    font-size: 25px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 1;
+.user-stories h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #478c48;
+}
+
+.story {
+    margin-bottom: 30px;
+}
+
+.story h3 {
+    color: #004d40;
+    margin-bottom: 10px;
+}
+
+.story p {
+    font-size: 16px;
+    line-height: 1.5;
 }

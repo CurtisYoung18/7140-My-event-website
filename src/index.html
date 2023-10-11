@@ -15,36 +15,66 @@
       <link rel="stylesheet" href="website_implementation/css/general_styles.css">
     </head>
     <body>
-        <!--Navigation bar-->
-        <div class="grid-container">
-          <div class="brand">The Mindful Retreat</div>
-          <div class="page-links">
-            <a href="index.html"><button class="menu-button">Home</button></a>
-            <a href="gallery.html"><button class="menu-button">Gallery</button></a>
-            <a href="about.html"><button class="menu-button">About</button></a>
-            <a href="community.html"><button class="menu-button">Community Forum</button></a>
-            <a href="resources.html"><button class="menu-button">Sustainabilty Resources</button></a>
-          </div> <!-- closes the page-links div -->
-          <div class="main">
-          <h1>Welcome to The Mindful Retreat</h1>
-            <p>[insert details about your event]</p>
-            <p>[insert details about your event]</p>
-            <p>[insert details about your event]</p>
-          </div> <!-- closes the main div -->
-        </div> <!-- closes the grid-container div -->
-    
-        <h1 class="homepage_title">The Mindful Retreat</h1>
-
-        <figure>
-          <img class="home_page1" src="website_implementation/media/home_page1.jpg" alt="An image of promoting sustainabilty with symbolic equation.">
-          <figcaption>Photo taken by Cherie Birkner src:unsplash.com</figcaption>
-        </figure>
-    
-
-    
-        <p style="font-size: 30px;">Welcome!</p>
-    
-        <p style="font-size: 20px;">Join our mindful community of nature lovers!</p>
-
+        <!-- the top navigation bar -->
+        <div class="top-nav">
+            <div class="brand">The Mindful Retreat</div>
+            <div class="menu-right">
+              <a href="index.html"><button class="top-button">Home</button></a>
+              <a href="about.html"><button class="top-button">About</button></a>
+            </div>
+        </div>
+        <!-- the main-content -->
+        <div class="main-content">
+            <!-- grid for left menu -->
+            <div class="grid-container-menu-left">
+                <a href="gallery.html">
+                    <button class="menu-button">
+                      <img src="website_implementation/media/gallery-svg-com.svg" alt="Icon photos">
+                      Gallery
+                    </button>
+                </a>
+                <a href="community.html">
+                    <button class="menu-button">
+                        <img src="website_implementation/media/community-svg.svg" alt="Icon community">
+                        Community Forum
+                    </button>
+                </a>
+                <a href="resources.html">
+                    <button class="menu-button">
+                        <img src="website_implementation/media/resources-svg.svg" alt="Icon resources">
+                        Sustainability Resources
+                    </button>
+                </a>
+            </div>
+            <!-- grid for user-profile -->
+            <div class="grid-container-profiles">
+              <figure class="user-profile" id="user-profile-1">
+                  <img src="website_implementation/media/user1.png" class="profile-image" alt="User-Profile 1">
+              </figure>
+              <figure class="user-profile" id="user-profile-2">
+                  <img src="website_implementation/media/user2.png" class="profile-image" alt="User-Profile 2">
+              </figure>
+              <figure class="user-profile" id="user-profile-3">
+                  <img src="website_implementation/media/user3.png" class="profile-image" alt="User-Profile 3">
+              </figure>
+              <figure class="user-profile" id="user-profile-4">
+                  <img src="website_implementation/media/user4.png" class="profile-image" alt="User-Profile 4">
+              </figure>
+            </div>
+        </div>
+        
+        <!-- grid for User Stories Section -->
+        <div class="user-stories">
+            <h2>User Stories Sharing</h2>
+            <div class="story">
+                <h3>Matilda</h3>
+                <p>At 19, Matilda lives on a cattle farm in Australia. She's passionate about the tough work she does and values land care, social equity, and fair trade. Concerned about issues of isolation, mental health, and climate change, she feels distant from urban living despite her strong ties to her local community. Pursuing online studies in Environmental Science, funded by her family and farm work, she prefers simple and fast website designs due to her slower internet speed, cherishing the beauty and challenges that come with country living.</p>
+            </div>
+            <div class="story">
+                <h3>Sofia</h3>
+                <p>An artist residing in the Swiss Alps, Sofia wishes for a platform to display her woodworking and traditional sculptures, inspired by her family's legacy. Deeply connected with her surroundings, she values environmental conservation and being conservative, advocating for sustainable living. Juggling her artistic endeavors while completing an arts degree, she favors fast and intuitive websites, seeking serenity and inspiration amidst the tranquil mountain views.</p>
+            </div>
+        </div>
+        
     </body>
 </html>
