@@ -48,6 +48,25 @@ body {
     color: #004d40;
 }
 
+/* define the welcome slogan */
+.welcome-text {
+    width: 100%;
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: auto;
+    padding-left: 5%;
+}
+
+.welcome-text h1 {
+    font-size: 2em;
+    color: #535353;
+}
+
+.welcome-text p {
+    font-size: 1.5em;
+    color: #535353;
+}
+
 /* wrapper for both menu and profiles grids */
 .main-content {
     display: flex;
@@ -145,7 +164,7 @@ body {
 .menu-button img {
     height: 100px;
     width: 100px;
-    margin-right: 10px;
+    margin-right: 20px;
 }    
 
 /* user-story section*/
