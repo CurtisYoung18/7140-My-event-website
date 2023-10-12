@@ -29,6 +29,49 @@ body {
     padding-left: 5%;
 }
 
+/*define the form */
+#subscribe-form > label {
+    font-size: large;
+}
+
+#subscribe-form > input {
+    font-size: medium;
+    border: 1px solid #ced4da; /* border size and color */
+    border-radius: .25rem; /* rounded corners*/
+    border-color: #80bdff;
+    transition: border-color .50s ease-in-out, box-shadow .30s ease-in-out; /* smooth transitions for hover/focus effects */
+}
+
+/* usability heuristic of visibility of system status */
+#subscribe-form > input:focus {
+    border-color: #80bdff; /* border color on focus */
+    outline: 0; /* removes the default focus outline */
+    box-shadow: 0 0 0 .2rem rgb(0, 123, 255, .25); /* adds a subtle glow effect on focus */
+
+}
+
+/* feedback when entering email address */
+#subscribe-form > input[type="email"]:valid {
+    border: 2px solid green;
+}
+
+#subscribe-form > input[type="email"]:invalid {
+    border: 2px solid red;
+}
+
+/* define the submit button */
+#subscribe-submit-button.disabled {
+    background-color: grey;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+}
+
+#subscribe-submit-button.enabled {
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
 
 /* define the footer for contacts */
 footer {
