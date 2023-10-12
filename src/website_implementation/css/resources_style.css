@@ -1,0 +1,9 @@
+/* background setting*/
+body {
+    background-image:url('../media/resource_background.jpg') !important; /* chat-gpt: '!important'*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    padding-top: 60px;
+}

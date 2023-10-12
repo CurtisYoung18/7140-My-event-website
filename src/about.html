@@ -16,24 +16,20 @@
         <link rel="stylesheet" href="website_implementation/css/general_styles.css">
     </head>
     <body>
-        <!-- define a class so that I can change its style in css-->
-        <h1 class="about-title">About the Mindful Retreat</h1>
-        
-        <p id="weather-info"></p>
-        <body style="position: relative;">
-
-        <div class="about-container">
-            <div id="about-item-1">
-                <figure class="section-icon">
-                    <img src="website_implementation/media/weather.png" alt="Weather icon with sun and clouds">
-                </figure>
-                <h2>Current Weather</h2>
-                <p>Temperature</p>
-                <p id="current_temperature">??</p>
-                <p>Wind Speed</p>
-                <p id="current_windspeed">??</p>
+        <!-- the top navigation bar -->
+        <div class="top-nav">
+            <div class="brand">The Mindful Retreat</div>
+            <div class="menu-right">
+              <a href="index.html"><button class="top-button">Home</button></a>
+              <a href="about.html"><button class="top-button">About</button></a>
             </div>
-            <div id="about-item-2">
+        </div>
+        <!-- head -->
+        <div class="about-head">About Us</div>
+        <!-- main container -->
+        <div class="about-container">
+            <!-- texts -->
+            <div id="about-item-1">
                 <h3>Organized by Family, Friends & Community</h3>
                 <p>The Mindful Retreat Event is more than a gathering of nature lovers.</p>
                 <h3>Who We Are</h3>
@@ -41,13 +37,22 @@
                 <h3>Our Mission</h3>
                 <p>We aim to celebrate the wisdom, skills and artistry of sustainabilty.</p>
             </div>
-            <div id="about-item-3">
-                
-            </div>
-            <div id="about-item-4">
-                
-            </div>
         </div>
-        <script src="website_implementation/js/about.js"></script>
+        <!-- contacts -->
+        <footer>
+            <div class="contact-container">
+                <h3>Contact Us</h3>
+                <p><strong>Address:</strong> 123 Mindful St., Retreat City, 12345</p>
+                <p><strong>Phone:</strong> +61 xxx xxx xxx</p>
+                <p><strong>Email:</strong> contact@mindfulretreat.com</p>
+                <div class="social-media">
+                    <!-- Here I used chat-gpt to help set up a blank link -->
+                    <a href="#" target="_blank"><img src="website_implementation/media/facebook.svg" alt="Iocn Facebook"></a>
+                    <a href="#" target="_blank"><img src="website_implementation/media/twitter.svg" alt="Iocn Twitter"></a>
+                    <a href="#" target="_blank"><img src="website_implementation/media/insta.svg" alt="Iocn Instagram"></a>
+                </div>
+            </div>
+        </footer>
+
     </body>
 </html>

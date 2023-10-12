@@ -1,6 +1,11 @@
 /* ensure the body takes the full viewport height */
 body {
     background-color: antiquewhite;
+    background-image:url('../media/home_background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
     font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
@@ -12,7 +17,6 @@ body {
     height: auto;
     width: 100%;
 }
-
 
 /* define the top-nav */
 .top-nav {
@@ -186,7 +190,7 @@ body {
 }
 
 .story {
-    margin-bottom: 30px;
+    margin: 0 30px 30px 30px;
 }
 
 .story h3 {
