@@ -80,3 +80,9 @@ For this part I used chat-gpt to generate the style for me as well as the conten
     padding-left: 20px;
 }
 
+/* define blank link for tips */
+.tip-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
