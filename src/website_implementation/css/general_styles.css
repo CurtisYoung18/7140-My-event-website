@@ -20,7 +20,7 @@ body {
 
 /* define the top-nav */
 .top-nav {
-    background-color: #478c48;
+    background-color: #787f72;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -63,12 +63,12 @@ body {
 
 .welcome-text h1 {
     font-size: 2em;
-    color: #535353;
+    color: #091104;
 }
 
 .welcome-text p {
     font-size: 1.5em;
-    color: #535353;
+    color: #091104;
 }
 
 /* wrapper for both menu and profiles grids */

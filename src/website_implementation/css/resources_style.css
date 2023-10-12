@@ -7,3 +7,76 @@ body {
     background-attachment: fixed;
     padding-top: 60px;
 }
+
+/* head: 'life_style tips' */
+.resources-title {
+    font-size: 25px;
+    position: absolute;
+    top: 5px;
+    margin: 2px 0;
+    left: 10px;
+    z-index: 1;
+}
+
+/* define the central bubble 
+For this I used chat-gpt to generate the bubble for me.
+*/
+.category-bubble {
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Adjust for the bubble's own dimensions */
+    
+    background-color: white;
+    padding: 20px 30px;   /* Provide some space around the text */
+    border-radius: 50px;  /* Make it look like a bubble */
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1); /* Optional: Add a subtle shadow for depth */
+    
+    font-size: 1.5em;
+    color: #004d40;
+    text-align: center;
+}
+
+/* define the style of 'tips'
+For this part I used chat-gpt to generate the style for me as well as the contents of tips.
+*/
+.tip-box {
+    position: fixed;
+    width: 200px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+    border: 1px solid #004d40;
+    font-size: medium;
+    color: #004d40;
+}
+
+.top {
+    top: 100px;
+    left: 350px;
+}
+
+.right {
+    top: 100px;
+    right: 50px;
+}
+
+.bottom {
+    bottom: 100px;
+    right: 350px;
+}
+
+.left {
+    bottom: 100px;
+    left: 50px;
+}
+
+.tip-box h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.tip-box ul {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
