@@ -17,19 +17,19 @@
     </head>
     <body>
         <!-- the top navigation bar -->
-        <div class="top-nav">
+        <div class="top-nav" aria-label="Top navigation bar">
             <div class="brand">The Mindful Retreat</div>
-            <div class="menu-right">
-              <a href="index.html"><button class="top-button">Home</button></a>
-              <a href="about.html"><button class="top-button">About</button></a>
+            <div class="menu-right" aria-label="Main menu">
+              <a href="index.html"><button class="top-button" aria-label="Home button">Home</button></a>
+              <a href="about.html"><button class="top-button" aria-label="About button">About</button></a>
             </div>
         </div>
         <!-- head -->
-        <div class="about-head">About Us</div>
+        <div class="about-head" aria-label="About Us heading">About Us</div>
         <!-- main container -->
-        <div class="about-container">
+        <div class="about-container" aria-label="About content">
             <!-- texts -->
-            <div id="about-item-1">
+            <div id="about-item-1" aria-label="About description">
                 <h1>Organized by Family, Friends & Community</h1>
                 <p>The Mindful Retreat Event is more than a gathering of nature lovers.</p>
                 <h1>Who We Are</h1>
@@ -38,8 +38,8 @@
                 <p>We aim to celebrate the wisdom, skills and artistry of sustainabilty.</p>
             </div>
             <!-- subsucribe-form -->
-            <div id="about-item-2">
-                <form id="subscribe-form">
+            <div id="about-item-2" aria-label="Subscribe form">
+                <form id="subscribe-form" aria-label="Newsletter subscription form">
                     <h2>Subscribe to our newsletter!</h2>
                     <label for="firstName">First Name:</label>
                     <input type="text" id="firstName" name="firstName" placeholder="Enter your First Name" required>
@@ -53,21 +53,21 @@
                     <input type="submit" value="Subscribe" id="subscribe-submit-button" disabled>
                 </form>
 
-                <div id="responseMessage"></div>
+                <div id="responseMessage" aria-label="Subscription response message"></div>
             </div>
         </div>
         <!-- contacts -->
-        <footer>
-            <div class="contact-container">
+        <footer aria-label="Footer with contact details">
+            <div class="contact-container" aria-label="Contact information">
                 <h3>Contact Us</h3>
                 <p><strong>Address:</strong> 123 Mindful St., Retreat City, 12345</p>
                 <p><strong>Phone:</strong> +61 xxx xxx xxx</p>
                 <p><strong>Email:</strong> contact@mindfulretreat.com</p>
-                <div class="social-media">
+                <div class="social-media" aria-label="Social media links">
                     <!-- Here I used chat-gpt to help set up a blank link -->
-                    <a href="#" target="_blank"><img src="website_implementation/media/facebook.svg" alt="Iocn Facebook"></a>
-                    <a href="#" target="_blank"><img src="website_implementation/media/twitter.svg" alt="Iocn Twitter"></a>
-                    <a href="#" target="_blank"><img src="website_implementation/media/insta.svg" alt="Iocn Instagram"></a>
+                    <a href="#" target="_blank" aria-label="Link to our Facebook page"><img src="website_implementation/media/facebook.svg" alt="Iocn Facebook"></a>
+                    <a href="#" target="_blank" aria-label="Link to our Twitter page"><img src="website_implementation/media/twitter.svg" alt="Iocn Twitter"></a>
+                    <a href="#" target="_blank" aria-label="Link to our Instagram page"><img src="website_implementation/media/insta.svg" alt="Iocn Instagram"></a>
                 </div>
             </div>
         </footer>
