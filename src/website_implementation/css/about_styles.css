@@ -1,6 +1,7 @@
 /* background setting*/
 body {
     background-image:url('../media/about_background.jpg') !important; /* chat-gpt: '!important'*/
+    /* photo created by Annie Spratt, from https://unsplash.com/photos/hX_hf2lPpUU */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;

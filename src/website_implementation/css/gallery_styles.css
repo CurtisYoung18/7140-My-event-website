@@ -98,8 +98,16 @@
 }
 
 .modal-img {
-    max-width: 80%;
-    max-height: 80%;
+    width: 50%;
+    height: auto;
     border: 5px solid white;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* for mobile screen */
+@media only screen and (max-width: 768px) {
+    .gallery-title {
+        top: 100px; /* avoid overlap */
+        left: 5px;
+    }
 }
