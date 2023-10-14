@@ -107,7 +107,7 @@
 /* for mobile screen */
 @media only screen and (max-width: 768px) {
     .gallery-title {
-        top: 100px; /* avoid overlap */
+        top: 10px; /* avoid overlap */
         left: 5px;
     }
 }

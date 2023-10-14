@@ -19,8 +19,9 @@ body {
     width: 100%; /* set width to full viewport width */
 }
 
-/* define the top-nav */
-.top-nav {
+
+/* define the menu */
+.top-nav, .flex-side-menu {
     background-color: #787f72;
     display: flex;
     justify-content: space-between;
@@ -28,6 +29,19 @@ body {
     width: 100%;
     padding: 10px 20px;
     font-size: 1.5em;
+}
+
+/* style the bottom menu */
+.bottom-menu {
+    position: sticky;
+    bottom: 0;        
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    color: white;
 }
 
 /* define the brand */
@@ -204,11 +218,21 @@ body {
     line-height: 1.5;
 }
 
+/* hide the buttom and side menu by default */
+.flex-footer-menu, .flex-side-menu {
+    display: none;
+}
+
 /* for mobile screen */
 @media only screen and (max-width: 768px) {
     .top-nav {
         flex-direction: column;
         text-align: center;
+        display: none;
+    }
+    
+    .flex-footer-menu {
+        display: block;
     }
 
     .menu-right {
@@ -271,4 +295,12 @@ body {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 1fr);
     }
+}
+
+/* for tablet and phones in landscape */
+@media only screen and (min-width: 601px) and (max-width: 1194px) {
+    .flex-side-menu {
+        display: block;
+    }
+
 }

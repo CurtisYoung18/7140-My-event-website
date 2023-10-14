@@ -24,8 +24,16 @@
               <a href="about.html"><button class="top-button" aria-label="About button">About</button></a>
             </div>
         </div>
+        <!-- the side menu -->
+        <aside class="flex-side-menu" aria-label="main menu">
+            <p>Side Menu</p>
+            <div class="flex-side-menu" aria-label="Main menu">
+                <a href="index.html"><button class="top-button" aria-label="Home button">Home</button></a>
+                <a href="about.html"><button class="top-button" aria-label="About button">About</button></a>
+            </div>
+        </aside>
 
-        
+        <!-- the main content -->
         <div class="gallery-container" aria-label="Photo gallery">
             <figure class="gallery-item" id="gallery-item-1" aria-label="Gallery image 1">
                 <img src="website_implementation/media/gallery_1.jpg" class="gallery-img" alt="An image of two hands hugging a tree.">
@@ -52,8 +60,22 @@
                 <img src="website_implementation/media/gallery_8.jpg" class="gallery-img" alt="An image of some tooth brushes made by sustainable materials.">
             </figure>
         </div><!--closes the gallery-container-->
+        <!-- the bottom menu -->
+        <footer class="flex-footer-menu" aria-label="main menu">
+            <div class="bottom-menu" aria-label="Main menu">
+                <a href="index.html" aria-label="Home button">
+                    <img src="website_implementation/media/home_bottom.svg">
+                    <span>Home</span>
+                </a>
+                <a href="about.html" aria-label="About button">
+                    <img src="website_implementation/media/about_bottom.svg">
+                    <span>About</span>
+                </a>
+            </div>
+        </footer>
 
         <script src="website_implementation/js/gallery.js"></script>
+        <script src="website_implementation/js/site_interactions.js"></script>
 
     </body>
 </html>

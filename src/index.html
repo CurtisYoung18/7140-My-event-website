@@ -10,19 +10,27 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300;1,400&display=swap" rel="stylesheet">
 
-
       <!-- link to css -->
       <link rel="stylesheet" href="website_implementation/css/general_styles.css">
     </head>
     <body>
         <!-- the top navigation bar -->
-        <div class="top-nav" aria-label="Top navigation bar">
+        <div class="top-nav" aria-label="main menu">
             <div class="brand">The Mindful Retreat</div>
             <div class="menu-right" aria-label="Main menu">
               <a href="index.html"><button class="top-button" aria-label="Home button">Home</button></a>
               <a href="about.html"><button class="top-button" aria-label="About button">About</button></a>
             </div>
         </div>
+        <!-- the side menu -->
+        <aside class="flex-side-menu" aria-label="main menu">
+            <p>Side Menu</p>
+            <div class="flex-side-menu" aria-label="Main menu">
+                <a href="index.html"><button class="top-button" aria-label="Home button">Home</button></a>
+                <a href="about.html"><button class="top-button" aria-label="About button">About</button></a>
+            </div>
+        </aside>
+        
         <!-- the welcome slogan -->
         <div class="welcome-text" aria-label="Welcome message">
             <h1>Welcome!</h1>
@@ -67,7 +75,6 @@
               </figure>
             </div>
         </div>
-        
         <!-- grid for User Stories Section -->
         <div class="user-stories" aria-label="User stories section">
             <h2>User Stories Sharing</h2>
@@ -80,6 +87,20 @@
                 <p>An artist residing in the Swiss Alps, Sofia wishes for a platform to display her woodworking and traditional sculptures, inspired by her family's legacy. Deeply connected with her surroundings, she values environmental conservation and being conservative, advocating for sustainable living. Juggling her artistic endeavors while completing an arts degree, she favors fast and intuitive websites, seeking serenity and inspiration amidst the tranquil mountain views.</p>
             </div>
         </div>
-        
+        <!-- the bottom menu -->
+        <footer class="flex-footer-menu" aria-label="main menu">
+            <div class="bottom-menu" aria-label="Main menu">
+                <a href="index.html" aria-label="Home button">
+                    <img src="website_implementation/media/home_bottom.svg">
+                    <span>Home</span>
+                </a>
+                <a href="about.html" aria-label="About button">
+                    <img src="website_implementation/media/about_bottom.svg">
+                    <span>About</span>
+                </a>
+            </div>
+        </footer>
+
+        <script src="website_implementation/js/site_interactions.js"></script>
     </body>
 </html>
