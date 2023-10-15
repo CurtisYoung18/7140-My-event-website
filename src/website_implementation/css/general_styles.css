@@ -17,6 +17,7 @@ body {
     padding: 0; /* remove default margin */
     height: auto; /* allow body to expand as needed */
     width: 100%; /* set width to full viewport width */
+    padding-bottom: 60px;
 }
 
 
@@ -33,15 +34,29 @@ body {
 
 /* style the bottom menu */
 .bottom-menu {
-    position: sticky;
+    position: fixed;
     bottom: 0;        
     left: 0;
     width: 100%;
     z-index: 1000;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 100px;
-    color: white;
+    background-color: #787f72;
+    height: 60px;
+}
+
+/* style the menu text */
+.bottom-menu a {
+    text-decoration: none;
+    color: black;
+}
+
+/* style the menu icon */
+.bottom-menu img {
+    width: 40px;
+    height: 40px;
 }
 
 /* define the brand */
@@ -91,7 +106,6 @@ body {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-top: 50px;
 }
 
 /* style the profiles grid */
@@ -302,5 +316,4 @@ body {
     .flex-side-menu {
         display: block;
     }
-
 }
