@@ -1,3 +1,12 @@
+body {
+    background-image:url('../media/home_background.jpg');
+    /* photo created by Appolinary Kalashnikova, from https://unsplash.com/photos/WYGhTLym344 */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
 /* define the tilte of gallery.html*/
 .gallery-title {
     font-size: 25px;
