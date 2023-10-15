@@ -111,3 +111,12 @@
         left: 5px;
     }
 }
+
+
+/* for tablet and phones in landscape */
+@media only screen and (min-width: 768px) and (max-width: 1194px) {
+    .gallery-title {
+        top: 10px; /* avoid overlap */
+        left: 50%;
+    }
+}

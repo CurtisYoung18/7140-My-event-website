@@ -21,8 +21,8 @@ body {
 }
 
 
-/* define the menu */
-.top-nav, .flex-side-menu {
+/* define the top menu */
+.top-nav {
     background-color: #787f72;
     display: flex;
     justify-content: space-between;
@@ -30,6 +30,39 @@ body {
     width: 100%;
     padding: 10px 20px;
     font-size: 1.5em;
+}
+
+/* define the side menu */
+.flex-side-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    background-color: rgba(120, 127, 114, 0.9);
+    overflow-y: auto;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    padding: 20px 0;
+}
+
+/* style the menu text */
+.flex-side-menu a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+}
+
+/* style the menu icon */
+.flex-side-menu img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
 }
 
 /* style the bottom menu */
@@ -240,8 +273,6 @@ body {
 /* for mobile screen */
 @media only screen and (max-width: 768px) {
     .top-nav {
-        flex-direction: column;
-        text-align: center;
         display: none;
     }
     
@@ -312,8 +343,31 @@ body {
 }
 
 /* for tablet and phones in landscape */
-@media only screen and (min-width: 601px) and (max-width: 1194px) {
+@media only screen and (min-width: 768px) and (max-width: 1194px) {
     .flex-side-menu {
         display: block;
     }
+
+    .top-nav {
+        display: none;
+    }
+
+    body {
+        padding-left: 130px;
+        max-width: calc(100% - 130px);
+    }
+
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid-container-profiles, .grid-container-menu-left {
+        width: 80vw; /* Adjusted width for better view */
+    }
+
+    .user-stories {
+        width: 80vw; /* Adjusted width for better view */
+    }
+
 }

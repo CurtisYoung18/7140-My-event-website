@@ -129,3 +129,48 @@ For this part I used chat-gpt to generate the style for me as well as the conten
         font-size: 14px;
     }
 }
+
+/* for tablet and phones in landscape */
+@media only screen and (min-width: 768px) and (max-width: 1194px) {
+    .resources-title {
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .tip-box {
+        position: fixed; /* use static positioning on mobile to stack them */
+        max-width: 90%;   /* no more than 90% of the screen width */
+        margin: 15px auto; /* center it and give some space between them */
+    }
+
+    .top {
+        top: 100px;
+        left: 150px;
+    }
+    
+    .right {
+        top: 100px;
+        right: 50px;
+    }
+    
+    .bottom {
+        bottom: 100px;
+        right: 50px;
+    }
+    
+    .left {
+        bottom: 100px;
+        left: 150px;
+    }
+    
+
+
+    .tip-box h4 {
+        font-size: 25px;
+    }
+
+    .tip-box ul {
+        font-size: 15px;
+    }
+}
