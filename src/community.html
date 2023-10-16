@@ -16,7 +16,6 @@
       <link rel="stylesheet" href="website_implementation/css/general_styles.css">
     </head>
     <body>
-       
         <!-- the top navigation bar -->
         <div class="top-nav" aria-label="main menu">
           <div class="brand">The Mindful Retreat</div>
@@ -38,29 +37,81 @@
         <section class="flex-main-content" aria-label="Main content">
             <div class="grid-row">
                 <div class="col-12 col-md-12 col-lg-4" style="background-color: skyblue;">
-                    <p class="card-body-text p-2">I want that.</p>
+                    <p class="grab-text">This wellness site is a project that aims to make community wellness activities more visble to people. Community wellness events are aggregated into one page, making it easier for people find local wellness events.</p>
+                    <p class="grab-text">use js fetch api to submit a new event to an endpoint</p>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4" style="background-color: palegoldenrod;">
-                    <div class="card" aria-labelledby="card1-title">
-                        <h2 class="card-header m-2" id="card1-title">Quiet Mindful</h2>
-                        <img class="card-banner-image" src="website_implementation/media/gallery_1.jpg" alt="Image of Quiet Mindful">
-                        <p class="card-body-text p-2">Quiet Mind is a voice app.</p>
+                <div class="col-12 col-md-6 col-lg-8" style="background-color: palegoldenrod;">
+                    <div class="grid-row">
+                        <div class="col-12 col-md-12 col-lg-12">
+                            <div class="card" role="group" aria-labelledby="card-form-title" aria-describedby="card-form-desc">
+                              <h2 class="card-header m-2" id="card-form-title">Submit an event form</h2>
+                              <img class="card-banner-image" src="website_implementation/media/gallery_1.jpg" alt="Image of Quiet Mindful">
+                              <p class="card-body-text p-2" id="card-form-desc">This is the form used to submit an event</p>
+                              <form id="eventForm" class="m-2" enctype="multipart/form-data">
+                                  <div class="form-group">
+                                      <label for="name">Event Name:</label>
+                                      <input type="text" id="name" name="name" required>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="location">Location:</label>
+                                      <input type="text" id="location" name="location" required>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="location">Organiser:</label>
+                                    <input type="text" id="organiser" name="organiser" required>
+                                  </div>
+                                  <div class="form-group">
+                                      <label>Event Type:</label>
+                                      <div class="form-check">
+                                          <input class="form-check-input" type="radio" name="event_type" id="workshop" value="Workshop" required>
+                                          <label class="form-check-input" for="workshop">Workshop</label>
+                                      </div>
+                                      <div class="form-check">
+                                          <input class="form-check-input" type="radio" name="event_type" id="seminar" value="Seminar" required>
+                                          <label class="form-check-input" for="seminar">Seminar</label>
+                                      </div>
+                                      <div class="form-check">
+                                          <input class="form-check-input" type="radio" name="event_type" id="groupActivity" value="Group Activity" required>
+                                          <label class="form-check-input" for="groupActivity">Group Activity</label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="event_type" id="webinar" value="Webinar" required>
+                                        <label class="form-check-input" for="webinar">Webinar</label>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="description">Description:</label>
+                                      <textarea id="description" name="description" rows="4" required></textarea>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="date_time">Date and Time:</label>
+                                      <input tyoe="text" id="date_time" name="date_time" placeholder="e.g. 2023-05-31 14:30" required>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="photo" id="photo-file-input-label" class="p-1">Add a photo (Optional)</label>
+                                    <input tyoe="file" id="photo" name="photo-file-input" accept="image/*" capture="camera"> <span id="selected-file-name"></span>
+                                  </div>
+                                  <div>
+                                      <input class="btn btn-primary" type="submit" value="Submit Event">
+                                  </div>
+                              </form>
+                            </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4" style="background-color: palegoldenrod;">
-                  <div class="card" aria-labelledby="card2-title">
-                      <h2 class="card-header m-2" id="card2-title">b2</h2>
-                      <img class="card-banner-image" src="website_implementation/media/gallery_2.jpg" alt="Image of b2">
-                      <p class="card-body-text p-2">b2 is a app.</p>
+                    <div class="card" aria-labelledby="card2-title">
+                        <h2 class="card-header m-2" id="card2-title">b2</h2>
+                        <img class="card-banner-image" src="website_implementation/media/gallery_2.jpg" alt="Image of b2">
+                        <p class="card-body-text p-2">b2 is a app.</p>
+                    </div>
                   </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4" style="background-color: palegoldenrod;">
-                  <div class="card" aria-labelledby="card3-title">
-                      <h2 class="card-header m-2" id="card3-title">b2</h2>
-                      <img class="card-banner-image" src="website_implementation/media/gallery_2.jpg" alt="Another image of b2">
-                      <p class="card-body-text p-2">b2 is a app.</p>
+                  <div class="col-12 col-md-6 col-lg-4" style="background-color: palegoldenrod;">
+                    <div class="card" aria-labelledby="card3-title">
+                        <h2 class="card-header m-2" id="card3-title">b2</h2>
+                        <img class="card-banner-image" src="website_implementation/media/gallery_2.jpg" alt="Another image of b2">
+                        <p class="card-body-text p-2">b2 is a app.</p>
+                    </div>
                   </div>
-                </div>
             </div>
           
         </section>
