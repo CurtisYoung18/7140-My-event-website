@@ -1,6 +1,11 @@
 /* global constant variables */
 const photoFileInputLabel = document.getElementById('photo-file-input-label');
 const photoFileInput = document.getElementById('photo-file-input');
+const myInput = document.querySelector("#date_time");
+const fp = flatpickr(myInput, {
+    enableTime: true,
+    dateFormat: "Y-m-d H:i",
+});
 
 /* constant functions */
 const triggerFileInput = () => {
