@@ -93,6 +93,85 @@ body {
     color: black;
 }
 
+/* event */
+label {
+    color: black;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+/* Labels */
+.form-group label {
+    display: block;
+    margin: 0.5rem;
+    font-weight: bold;
+}
+
+/* input fields and Textarea */
+.form-group input[type="text"],
+.form-group textarea {
+    width: 85%;
+    padding: 0.5rem;
+    border: 1px soild #ced4da;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* radio buttons */
+.form-check {
+    margin-bottom: 0.25rem;
+}
+
+.form-check-label {
+    display: inline !important;
+    margin-left: 0.25rem;
+}
+
+/* button styles */
+/* base button style */
+.btn {
+    padding: 1vh 1vw;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    font-size: 1em;
+}
+
+.btn-primary {
+    background-color: var(--bloodred);
+    color: black;
+    font-size: larger;
+}
+
+.btn-primary:hover {
+    background-color: #f22121;
+    color: var(--bloodred);
+}
+
+/* file submit elements */
+#photo-file-input-label {
+    width: 50%;
+    padding: 1vw;
+    background-color: lightgrey;
+    color: black;
+    cursor: pointer;
+    border: var(--grey);
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+#photo-file-input-label:hover {
+    background-color: var(--bloodred);
+    color: var(--bloodred);
+}
+
+#photo-file-input {
+    display: none;
+}
+
 /* width of the items in our grid-row */
 .col-lg-1 { grid-column: span 1; }
 .col-lg-2 { grid-column: span 2; }

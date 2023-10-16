@@ -36,11 +36,11 @@
         <!-- the main content -->
         <section class="flex-main-content" aria-label="Main content">
             <div class="grid-row">
-                <div class="col-12 col-md-12 col-lg-4" style="background-color: skyblue;">
+                <div class="col-12 col-md-12 col-lg-4">
                     <p class="grab-text">This wellness site is a project that aims to make community wellness activities more visble to people. Community wellness events are aggregated into one page, making it easier for people find local wellness events.</p>
                     <p class="grab-text">use js fetch api to submit a new event to an endpoint</p>
                 </div>
-                <div class="col-12 col-md-6 col-lg-8" style="background-color: palegoldenrod;">
+                <div class="col-12 col-md-6 col-lg-8">
                     <div class="grid-row">
                         <div class="col-12 col-md-12 col-lg-12">
                             <div class="card" role="group" aria-labelledby="card-form-title" aria-describedby="card-form-desc">
@@ -85,20 +85,21 @@
                                   </div>
                                   <div class="form-group">
                                       <label for="date_time">Date and Time:</label>
-                                      <input tyoe="text" id="date_time" name="date_time" placeholder="e.g. 2023-05-31 14:30" required>
+                                      <input type="text" id="date_time" name="date_time" placeholder="e.g. 2023-05-31 14:30" required>
                                   </div>
                                   <div class="form-group">
-                                    <label for="photo" id="photo-file-input-label" class="p-1">Add a photo (Optional)</label>
-                                    <input tyoe="file" id="photo" name="photo-file-input" accept="image/*" capture="camera"> <span id="selected-file-name"></span>
+                                      <label for="photo" id="photo-file-input-label" class="p-1">Add a photo (Optional)</label>
+                                      <input type="file" name="photo-file-input" id="photo-file-input" accept="image/*" capture="camera"> <span id="selected-file-name"></span>
                                   </div>
                                   <div>
                                       <input class="btn btn-primary" type="submit" value="Submit Event">
                                   </div>
                               </form>
                             </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4" style="background-color: palegoldenrod;">
+                <div class="col-12 col-md-6 col-lg-4">
                     <div class="card" aria-labelledby="card2-title">
                         <h2 class="card-header m-2" id="card2-title">b2</h2>
                         <img class="card-banner-image" src="website_implementation/media/gallery_2.jpg" alt="Image of b2">
@@ -133,5 +134,6 @@
         <!-- site js -->
         <script src="website_implementation/js/site_interactions.js"></script>
         <script src="website_implementation/js/card_height.js"></script>
+        <script src="website_implementation/js/forum_event.js"></script>
     </body>
 </html>
