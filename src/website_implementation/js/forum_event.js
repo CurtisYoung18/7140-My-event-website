@@ -10,6 +10,7 @@ const fp = flatpickr(myInput, {
 const baseURLCommunityEvents = "https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/community_events/";
 const postCommunityEvnetMethod = 'POST';
 const eventsContainer = document.getElementById('events-container');
+const filterDropdown = document.getElementById('filterDropdown');
 
 const queryString = new URLSearchParams(queryParams).toString();
 const urlWithParams = baseURLCommunityEvents+"?"+queryString;
@@ -65,6 +66,43 @@ const handleFormSubmit = event => {
     });
 };
 
+const renderEvents = (eventsToRender) => {
+    while (eventsContainer.firstChild) {
+        eventsContainer.removeChild(eventsContainer.firstChild);
+    }
+    eventsToRender.forEach(event => {
+        const eventTemplet = `
+                <article class="col-12 col-md-12 col-lg-6" id="card${event.id}">
+                    <div class="card" role="group" aria-labelledby="card${event.id}-title" aria-describedby="card${event.id}-desc">
+                        <h2 class="card-header p-2" id="card${event.id}-title">${event.name}</h2>
+                        <img class="card-banner-image" src="${event.photo}" alt="${event.name}">
+                        <p class="card-body-text p-2">${event.description}</p>
+                        <p class="card-body-text px-2"><strong>Location:</strong>${event.location}</p>
+                        <p class="card-body-text px-2"><strong>Organiser:</strong>${event.organiser}</p>
+                        <p class="card-body-text px-2"><strong>Event Type:</strong>${event.event_type}</p>
+                        <p class="card-body-text px-2"><strong>Date & Time:</strong>${new Date(event.date_time).toLocaleString()}</p>
+                        <button data-id="${event.id}" onclick="deleteCardById(this)">Delete</button>
+                    </div>
+                </article>
+            `;
+            eventsContainer.innerHTML += eventTemplet;
+    })
+    fetch(urlWithParams, requestOptions)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Network response was not ok");
+        }
+        return response.json();
+    })
+    .then(events => {
+        events_list = events;
+        renderEvents(events_list);
+    })
+    .catch(error => {
+        console.error("Error processing events:", error.message);
+        alert("There was a problem loading events. Please refresh the page to try again.");
+    });
+}
 // fetching events from Community Events API
 const getCommunityEvents = () => {
     const queryParams = {
