@@ -15,6 +15,9 @@ const filterDropdown = document.getElementById('filterDropdown');
 const queryString = new URLSearchParams(queryParams).toString();
 const urlWithParams = baseURLCommunityEvents+"?"+queryString;
 
+/* global variables */
+let events_list;
+
 /* constant functions */
 const triggerFileInput = () => {
     photoFileInput.click();
@@ -30,6 +33,7 @@ const handleFileChange = () => {
     photoFileInputLabel.textContent = fileName;
 };
 
+// submit
 const handleFormSubmit = event => {
     event.preventDefault();
 
@@ -66,12 +70,13 @@ const handleFormSubmit = event => {
     });
 };
 
+// render events after fetch or filter
 const renderEvents = (eventsToRender) => {
     while (eventsContainer.firstChild) {
         eventsContainer.removeChild(eventsContainer.firstChild);
     }
     eventsToRender.forEach(event => {
-        const eventTemplet = `
+        const eventTemplate = `
                 <article class="col-12 col-md-12 col-lg-6" id="card${event.id}">
                     <div class="card" role="group" aria-labelledby="card${event.id}-title" aria-describedby="card${event.id}-desc">
                         <h2 class="card-header p-2" id="card${event.id}-title">${event.name}</h2>
@@ -85,8 +90,24 @@ const renderEvents = (eventsToRender) => {
                     </div>
                 </article>
             `;
-            eventsContainer.innerHTML += eventTemplet;
+            eventsContainer.innerHTML += eventTemplate;
     })
+
+}
+
+// fetching events from Community Events API
+const getCommunityEvents = () => {
+    const queryParams = {
+        website_code: my_website_code,
+    }
+    const queryString = new URLSearchParams(queryParams).toString();
+    const urlWithParams = baseURLCommunityEvents+"?"+queryString;
+    const requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+    }
+
+    
     fetch(urlWithParams, requestOptions)
     .then(response => {
         if (!response.ok) {
@@ -102,55 +123,21 @@ const renderEvents = (eventsToRender) => {
         console.error("Error processing events:", error.message);
         alert("There was a problem loading events. Please refresh the page to try again.");
     });
-}
-// fetching events from Community Events API
-const getCommunityEvents = () => {
-    const queryParams = {
-        website_code: my_website_code,
-    }
-    const queryString = new URLSearchParams(queryParams).toString();
-    const urlWithParams = baseURLCommunityEvents+"?"+queryString;
-    const requestOptions = {
-        method: 'GET',
-        redirect: 'follow'
-    }
-
-    fetch(urlWithParams, requestOptions)
-    .then(response => {
-        if (!response.ok) {
-            throw new Error("Network response was not ok");
-        }
-        return response.json();
-    })
-    .then(events => {
-        console.log(events);
-        while (eventsContainer.firstChild) {
-            eventsContainer.removeChild(eventsContainer.firstChild);
-        }
-        events.forEach(event => {
-            const eventTemplet = `
-                <article class="col-12 col-md-12 col-lg-6" id="card${event.id}">
-                    <div class="card" role="group" aria-labelledby="card${event.id}-title" aria-describedby="card${event.id}-desc">
-                        <h2 class="card-header p-2" id="card${event.id}-title">${event.name}</h2>
-                        <img class="card-banner-image" src="${event.photo}" alt="${event.name}">
-                        <p class="card-body-text p-2">${event.description}</p>
-                        <p class="card-body-text px-2"><strong>Location:</strong>${event.location}</p>
-                        <p class="card-body-text px-2"><strong>Organiser:</strong>${event.organiser}</p>
-                        <p class="card-body-text px-2"><strong>Event Type:</strong>${event.event_type}</p>
-                        <p class="card-body-text px-2"><strong>Date & Time:</strong>${new Date(event.date_time).toLocaleString()}</p>
-                        <button data-id="${event.id}" onclick="deleteCardById(this)">Delete</button>
-                    </div>
-                </article>
-            `;
-            eventsContainer.innerHTML += eventTemplet;
-        })
-    })
-    .catch(error => {
-        console.error("Error processing events:", error.message);
-        alert("There was a problem loading events. Please refresh the page to try again.");
-    });
 };
 
+// event filtering
+const filterEventByTerm = (term) => {
+
+    // if no term selected, show all events
+    if (!term) {
+        renderEvents(events_list);
+        return;
+    }
+
+    // filter events by the term and then render them 
+    const filteredEvents = events_list.filter(event => event.event_type.includes(term));
+    renderEvents(filteredEvents);
+}
 // chat-gpt define the delete function
 function deleteCardById(buttonElement) {
     const eventId = buttonElement.getAttribute('data-id');
@@ -189,6 +176,10 @@ function deleteCardById(buttonElement) {
 photoFileInputLabel.addEventListener('click', triggerFileInput);
 photoFileInput.addEventListener('change', handleFileChange);
 eventForm.addEventListener("submit", handleFormSubmit);
+filterDropdown.addEventListener('change', (e) => {
+    const selectedTerm = e.target.value;
+    filterEventByTerm(selectedTerm);
+});
 
 /* page setup on first load */
 getCommunityEvents();
