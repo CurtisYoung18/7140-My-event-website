@@ -3,111 +3,57 @@
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- responsive nav bar -->
+      <link rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+      crossorigin="anonymous" 
+      referrerpolicy="no-referrer" 
+      />
       <title>The Mindful Retreat</title>
-
       <!--Google Fonts-->
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300;1,400&display=swap" rel="stylesheet">
-
       <!-- link to css -->
       <link rel="stylesheet" href="website_implementation/css/index_styles.css">
       <link rel="stylesheet" href="website_implementation/css/general_styles.css">
     </head>
     <body>
-        <!-- the top navigation bar -->
-        <div class="top-nav" aria-label="main menu">
-            <div class="brand">The Mindful Retreat</div>
-            <div class="menu-right" aria-label="Main menu">
-              <a href="index.html"><button class="top-button" aria-label="Home button">Home</button></a>
-              <a href="about.html"><button class="top-button" aria-label="About button">About</button></a>
+        <header>
+            <!-- the navigation bar -->
+            <div class="navbar">
+                <div class="logo"><a href="index.html">The Mindful Retreat</a></div>
+                <u1 class="links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </u1>
+                <a href="#" class="action_btn">Search</a>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
             </div>
-        </div>
-        <!-- the side menu -->
-        <aside class="flex-side-menu" aria-label="main menu">
-            <p>Side Menu</p>
-            <div class="flex-side-menu" aria-label="Main menu">
-                <a href="index.html" aria-label="Home button">
-                    <img src="website_implementation/media/home_bottom.svg">
-                    <span>Home</span>
-                </a>
-                <a href="about.html" aria-label="About button">
-                    <img src="website_implementation/media/about_bottom.svg">
-                    <span>About</span>
-                </a>
-            </div>
-        </aside>
+            <!-- responsive menu -->
+            <div class="dropdown_menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="community.html">Community Forum</a></li>
+                <li><a href="resources.html">Sustainability Resources</a></li>
+                <li><a href="#" class="action_btn">Search</a></li>
+            </div>           
+        </header>
         
-        <!-- the welcome slogan -->
-        <div class="welcome-text" aria-label="Welcome message">
-            <h1>Welcome!</h1>
-            <p>Join our mindful community of nature lovers!</p>
-        </div>      
-        <!-- the main-content -->
-        <div class="main-content">
-            <!-- grid for left menu -->
-            <div class="grid-container-menu-left" aria-label="Left menu">
-                <a href="gallery.html">
-                    <button class="menu-button" aria-label="Gallery button">
-                      <img src="website_implementation/media/gallery-svg-com.svg" alt="Icon photos">
-                      Gallery
-                    </button>
-                </a>
-                <a href="community.html">
-                    <button class="menu-button" aria-label="Community forum button">
-                        <img src="website_implementation/media/community-svg.svg" alt="Icon community">
-                        Community Forum
-                    </button>
-                </a>
-                <a href="resources.html">
-                    <button class="menu-button" aria-label="Sustainability resources button">
-                        <img src="website_implementation/media/resources-svg.svg" alt="Icon resources">
-                        Sustainability Resources
-                    </button>
-                </a>
-            </div>
-            <!-- grid for user-profile -->
-            <div class="grid-container-profiles" aria-label="User profiles">
-              <figure class="user-profile" id="user-profile-1" aria-label="User profile 1">
-                  <img src="website_implementation/media/user1.png" class="profile-image" alt="User-Profile 1">
-              </figure>
-              <figure class="user-profile" id="user-profile-2" aria-label="User profile 2">
-                  <img src="website_implementation/media/user2.png" class="profile-image" alt="User-Profile 2">
-              </figure>
-              <figure class="user-profile" id="user-profile-3" aria-label="User profile 3">
-                  <img src="website_implementation/media/user3.png" class="profile-image" alt="User-Profile 3">
-              </figure>
-              <figure class="user-profile" id="user-profile-4" aria-label="User profile 4">
-                  <img src="website_implementation/media/user4.png" class="profile-image" alt="User-Profile 4">
-              </figure>
-            </div>
-        </div>
-        <!-- grid for User Stories Section -->
-        <div class="user-stories" aria-label="User stories section">
-            <h2>User Stories Sharing</h2>
-            <div class="story" aria-label="Story of Matilda">
-                <h3>Matilda</h3>
-                <p>At 19, Matilda lives on a cattle farm in Australia. She's passionate about the tough work she does and values land care, social equity, and fair trade. Concerned about issues of isolation, mental health, and climate change, she feels distant from urban living despite her strong ties to her local community. Pursuing online studies in Environmental Science, funded by her family and farm work, she prefers simple and fast website designs due to her slower internet speed, cherishing the beauty and challenges that come with country living.</p>
-            </div>
-            <div class="story" aria-label="Story of Sofia">
-                <h3>Sofia</h3>
-                <p>An artist residing in the Swiss Alps, Sofia wishes for a platform to display her woodworking and traditional sculptures, inspired by her family's legacy. Deeply connected with her surroundings, she values environmental conservation and being conservative, advocating for sustainable living. Juggling her artistic endeavors while completing an arts degree, she favors fast and intuitive websites, seeking serenity and inspiration amidst the tranquil mountain views.</p>
-            </div>
-        </div>
-        <!-- the bottom menu -->
-        <footer class="flex-footer-menu" aria-label="main menu">
-            <div class="bottom-menu" aria-label="Main menu">
-                <a href="index.html" aria-label="Home button">
-                    <img src="website_implementation/media/home_bottom.svg">
-                    <span>Home</span>
-                </a>
-                <a href="about.html" aria-label="About button">
-                    <img src="website_implementation/media/about_bottom.svg">
-                    <span>About</span>
-                </a>
-            </div>
-        </footer>
+        <main>
+            <section id="slogan">
+                <h1>Welcome</h1>
+                <p>Join Our Community of Nature Lovers!</p>
+            </section>
+        </main>
 
         <script src="website_implementation/js/site_interactions.js"></script>
+        <script src="website_implementation/js/res_nav.js"></script>
     </body>
 </html>

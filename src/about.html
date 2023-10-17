@@ -3,6 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- responsive nav bar -->
+        <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer" 
+        />
         <title>About the Mindful Retreat</title>
         
         <!-- Change the font-style to match the homepage-->
@@ -16,22 +23,32 @@
         <link rel="stylesheet" href="website_implementation/css/general_styles.css">
     </head>
     <body>
-        <!-- the top navigation bar -->
-        <div class="top-nav" aria-label="main menu">
-            <div class="brand">The Mindful Retreat</div>
-            <div class="menu-right" aria-label="Main menu">
-              <a href="index.html"><button class="top-button" aria-label="Home button">Home</button></a>
-              <a href="about.html"><button class="top-button" aria-label="About button">About</button></a>
+        <header>
+            <!-- the navigation bar -->
+            <div class="navbar">
+                <div class="logo"><a href="index.html">The Mindful Retreat</a></div>
+                <u1 class="links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </u1>
+                <a href="#" class="action_btn">Search</a>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
             </div>
-        </div>
-        <!-- the side menu -->
-        <aside class="flex-side-menu" aria-label="main menu">
-            <p>Side Menu</p>
-            <div class="flex-side-menu" aria-label="Main menu">
-                <a href="index.html"><button class="top-button" aria-label="Home button">Home</button></a>
-                <a href="about.html"><button class="top-button" aria-label="About button">About</button></a>
-            </div>
-        </aside>
+            <!-- responsive menu -->
+            <div class="dropdown_menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="community.html">Community Forum</a></li>
+                <li><a href="resources.html">Sustainability Resources</a></li>
+                <li><a href="#" class="action_btn">Search</a></li>
+            </div>           
+        </header>
+        
         <!-- head -->
         <div class="about-head" aria-label="About Us heading">About Us</div>
         <!-- main container -->
@@ -78,23 +95,11 @@
                     <a href="#" target="_blank" aria-label="Link to our Instagram page"><img src="website_implementation/media/insta.svg" alt="Iocn Instagram"></a>
                 </div>
             </div>
-            <!-- the bottom menu -->
-            <div class="flex-footer-menu" aria-label="main menu">
-                <div class="bottom-menu" aria-label="Main menu">
-                    <a href="index.html" aria-label="Home button">
-                        <img src="website_implementation/media/home_bottom.svg">
-                        <span>Home</span>
-                    </a>
-                    <a href="about.html" aria-label="About button">
-                        <img src="website_implementation/media/about_bottom.svg">
-                        <span>About</span>
-                    </a>
-                </div>
-            </div>
         </footer>
 
         <script src="website_implementation/js/about.js"></script>
         <script src="website_implementation/js/site_interactions.js"></script>
+        <script src="website_implementation/js/res_nav.js"></script>
 
     </body>
 </html>

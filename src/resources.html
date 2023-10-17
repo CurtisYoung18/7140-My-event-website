@@ -3,6 +3,13 @@
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- responsive nav bar -->
+      <link rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+      crossorigin="anonymous" 
+      referrerpolicy="no-referrer" 
+      />
       <title>The Mindful Retreat</title>
 
       <!--Google Fonts-->
@@ -17,23 +24,32 @@
 
     </head>
     <body class="resource-page">
+        <header>
+            <!-- the navigation bar -->
+            <div class="navbar">
+                <div class="logo"><a href="index.html">The Mindful Retreat</a></div>
+                <u1 class="links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </u1>
+                <a href="#" class="action_btn">Search</a>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+            <!-- responsive menu -->
+            <div class="dropdown_menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="community.html">Community Forum</a></li>
+                <li><a href="resources.html">Sustainability Resources</a></li>
+                <li><a href="#" class="action_btn">Search</a></li>
+            </div>           
+        </header>
         <h1 class="resources-title" aria-label="Lifestyle Tips Title">Lifestyle Tips</h1>
-        <!-- the top navigation bar -->
-        <div class="top-nav" aria-label="main menu">
-            <div class="brand">The Mindful Retreat</div>
-            <div class="menu-right" aria-label="Main menu">
-                <a href="index.html"><button class="top-button" aria-label="Home button">Home</button></a>
-                <a href="about.html"><button class="top-button" aria-label="About button">About</button></a>
-            </div>
-        </div>  
-        <!-- the side menu -->
-        <aside class="flex-side-menu" aria-label="main menu">
-            <p>Side Menu</p>
-            <div class="flex-side-menu" aria-label="Main menu">
-                <a href="index.html"><button class="top-button" aria-label="Home button">Home</button></a>
-                <a href="about.html"><button class="top-button" aria-label="About button">About</button></a>
-            </div>
-        </aside>
         
         <!-- the bubble -->
         <div class="category-bubble" aria-label="Category bubble">Category</div>
@@ -83,21 +99,9 @@
                 </ul>
             </a>
         </div>     
-        <!-- the bottom menu -->
-        <footer class="flex-footer-menu" aria-label="main menu">
-            <div class="bottom-menu" aria-label="Main menu">
-                <a href="index.html" aria-label="Home button">
-                    <img src="website_implementation/media/home_bottom.svg">
-                    <span>Home</span>
-                </a>
-                <a href="about.html" aria-label="About button">
-                    <img src="website_implementation/media/about_bottom.svg">
-                    <span>About</span>
-                </a>
-            </div>
-        </footer>
 
         <script src="website_implementation/js/site_interactions.js"></script>
+        <script src="website_implementation/js/res_nav.js"></script>
 
     </body>
 </html>

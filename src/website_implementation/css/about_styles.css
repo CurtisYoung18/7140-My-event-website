@@ -2,6 +2,19 @@
 body {
     background-image:url('../media/about_background.jpg') !important; /* chat-gpt: '!important'*/
     /* photo created by Annie Spratt, from https://unsplash.com/photos/hX_hf2lPpUU */
+    background-image:url('../media/home_background.jpg');
+    /* photo created by Appolinary Kalashnikova, from https://unsplash.com/photos/WYGhTLym344 */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    display: flex; /* use flexbox for layout */
+    flex-direction: column; /* arrange vertically */
+    align-items: center; /* center horizontally */
+    justify-content: center; /* center vertically */
+    position: relative;
+    height: auto; /* allow body to expand as needed */
+    padding-bottom: 60px;
 }
 
 /* head: 'about us'*/
