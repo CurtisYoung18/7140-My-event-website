@@ -19,30 +19,34 @@ DOM Manipulation and Usability Enhancements
 Image Zoom Functionality for gallery.html
 */
 document.addEventListener('DOMContentLoaded', function() {
-    // choose all the images
     let galleryItems = document.querySelectorAll('.gallery-item img');
-    // create new div and img elements for modal box and image.
     let modal = document.createElement('div');
+    let modalContent = document.createElement('div');  // Create the modal content div
     let modalImage = document.createElement('img');
     
     modal.classList.add('image-modal');
+    modalContent.classList.add('modal-content');  // Add the class to the modal content div
     modalImage.classList.add('modal-img');
-    modal.appendChild(modalImage);
-    document.body.appendChild(modal);
-    
 
-    // For each image in the gallery, an event listener is added to listen for click events. 
-    // When an image is clicked, the src attribute of the image in the modal is set to the src of the clicked image, 
-    // and the modal is then displayed.
+    modalContent.appendChild(modalImage);  // Append the image to the modal content
+    document.body.appendChild(modal);
+    document.body.appendChild(modalContent);  // Append the modal content to the body
+
     galleryItems.forEach(item => {
         item.addEventListener('click', function() {
             modalImage.src = item.src;
             modal.style.display = 'block';
+            modalContent.style.display = 'block';  // Show the modal content
         });
     });
     
-    // click anywhere on the modal box will close it.
-    modal.addEventListener('click', function() {
+    // Close the modal when clicking anywhere
+    const closeModal = () => {
         modal.style.display = 'none';
-    });
+        modalContent.style.display = 'none';  // Hide the modal content
+    };
+
+    modal.addEventListener('click', closeModal);
+    modalContent.addEventListener('click', closeModal);  // Close when clicking on modal content
+    modalImage.addEventListener('click', closeModal);    // Close when clicking on the image itself
 });
