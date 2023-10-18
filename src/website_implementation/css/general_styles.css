@@ -30,6 +30,7 @@ a {
 
 a:hover {
     color: orange;
+    scale: 1.2;
 }
 
 /* header */

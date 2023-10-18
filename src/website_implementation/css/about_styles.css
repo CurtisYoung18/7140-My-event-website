@@ -119,3 +119,36 @@ footer {
 .fa-brands:hover {
     transform: scale(1.8);
 }
+
+
+/* for medium-sized screens, such as tablets */
+@media (max-width: 1194px) {
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    #about-item-1, #about-item-2 {
+        margin-bottom: 20px;
+    }
+
+    #about-item-2 {
+        margin-right: 50px;
+        margin-top: 50px;
+    }
+
+    footer {
+        margin-left: 20px;
+    }
+}
+
+/* for small screens, such as mobile phones */
+@media (max-width: 768px) {
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    #about-item-2 {
+        grid-column: 1;
+    }
+    
+}

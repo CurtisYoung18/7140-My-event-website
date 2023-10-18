@@ -4,163 +4,114 @@ body {
     /* photo created by David Marcu, from https://unsplash.com/photos/78A265wPiO4 */
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
     background-attachment: fixed;
     padding: 0; /* remove default margin */
 }
 
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-/* define the central bubble 
-For this I used chat-gpt to generate the bubble for me.
-*/
-.category-bubble {
-    position: fixed; 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Adjust for the bubble's own dimensions */
-    background-color: white;
-    padding: 20px 30px;   /* Provide some space around the text */
-    border-radius: 50px;  /* Make it look like a bubble */
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.1); /* Optional: Add a subtle shadow for depth */
-    font-size: 1.5em;
-    color: #004d40;
+.card {
+    position: relative;
+    width: 300px;
+    height: 450px;
+    margin: 20px;
+    background-color: #758a99;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    flex-shrink: 0;
+}
+
+.card .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* default big image */
+.card .photo {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0%;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+/* zoom in when hovering */
+.card:hover .photo {
+    top: 30px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* a small circle */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+/* make the contents more clear */
+.card .photo::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 50%, #222);
+}
+
+.card h1 {
+    position: absolute;
+    top: 370px;
+    transition: 0.5s;
+    font-size: 25px;
+}
+
+.card:hover h1 {
+    top: 170px;
+}
+
+.card h2{
+    margin-top: 220px;
+    width: 90%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    font-size: 18px;
     text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
 }
 
-/* define the style of 'tips'
-For this part I used chat-gpt to generate the style for me as well as the contents of tips.
-*/
-.tip-box {
-    position: fixed;
-    width: 200px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
-    border: 1px solid #004d40;
-    font-size: medium;
-    color: #004d40;
+.card a {
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
 }
 
-.top {
-    top: 100px;
-    left: 350px;
+.more {
+    font-size: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 8px 32px;
+    border-radius: 8px;
 }
 
-.right {
-    top: 100px;
-    right: 50px;
+.more:hover {
+    scale: 1.3;
 }
-
-.bottom {
-    bottom: 100px;
-    right: 350px;
+/* for tablet and phones in landscape */
+@media (max-width: 1194px) {
+    
 }
-
-.left {
-    bottom: 100px;
-    left: 50px;
-}
-
-.tip-box h4 {
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.tip-box ul {
-    list-style-type: decimal;
-    padding-left: 20px;
-}
-
-/* define blank link for tips */
-.tip-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
-
 
 /* for mobile screen */
-@media only screen and (max-width: 768px) {
-    .resources-title {
-        top: 10px;
-        left: 100px;
-        transform: translateX(-50%);
-    }
-
-    .category-bubble {
-        position: relative;
-        margin-right: 120px;
-        margin-top: 10px;
-        font-size: 1em; 
-        padding: 10px 15px;
-        max-width: 250px; 
-        border-radius: 15px;
-        transform: none; 
-    }
-
-    .tip-box {
-        position: static; /* use static positioning on mobile to stack them */
-        max-width: 90%;   /* no more than 90% of the screen width */
-        margin: 15px auto; /* center it and give some space between them */
-    }
-
-    /* remove fixed positioning from tips on mobile */
-    .top, .right, .bottom, .left {
-        top: auto;
-        bottom: auto;
-        left: auto;
-        right: auto;
-    }
-
-    .tip-box h4 {
-        font-size: 16px;
-    }
-
-    .tip-box ul {
-        font-size: 14px;
-    }
-}
-
-/* for tablet and phones in landscape */
-@media only screen and (min-width: 768px) and (max-width: 1194px) {
-    .resources-title {
-        top: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .tip-box {
-        position: fixed; /* use static positioning on mobile to stack them */
-        max-width: 90%;   /* no more than 90% of the screen width */
-        margin: 15px auto; /* center it and give some space between them */
-    }
-
-    .top {
-        top: 100px;
-        left: 150px;
-    }
-    
-    .right {
-        top: 100px;
-        right: 50px;
-    }
-    
-    .bottom {
-        bottom: 100px;
-        right: 50px;
-    }
-    
-    .left {
-        bottom: 100px;
-        left: 150px;
-    }
-    
-
-
-    .tip-box h4 {
-        font-size: 25px;
-    }
-
-    .tip-box ul {
-        font-size: 15px;
-    }
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }  
 }
