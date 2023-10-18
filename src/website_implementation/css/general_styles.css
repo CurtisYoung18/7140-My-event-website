@@ -24,7 +24,7 @@ li {
 
 a {
     text-decoration: none;
-    color: black;
+    color: #fff;
     font-size: 1rem;
 }
 
@@ -102,6 +102,10 @@ header {
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+.dropdown_menu.open {
+    height: 290px;
+}
+
 .dropdown_menu li {
     padding: 0.7rem;
     display: flex;
@@ -113,10 +117,6 @@ header {
     width: 100%;
     display: flex;
     justify-content: center;
-}
-
-.dropdown_menu.open {
-    height: 240px;
 }
 
 
@@ -142,5 +142,4 @@ header {
         left: 2rem;
         width: unset;
     }
-
 }

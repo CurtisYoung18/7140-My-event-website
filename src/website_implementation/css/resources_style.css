@@ -10,16 +10,6 @@ body {
 }
 
 
-/* head: 'life_style tips' */
-.resources-title {
-    font-size: 25px;
-    position: absolute;
-    top: 5px;
-    margin: 2px 0;
-    left: 10px;
-    z-index: 1;
-}
-
 /* define the central bubble 
 For this I used chat-gpt to generate the bubble for me.
 */

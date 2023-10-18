@@ -7,15 +7,6 @@ body {
     background-attachment: fixed;
 }
 
-/* define the tilte of gallery.html*/
-.gallery-title {
-    font-size: 25px;
-    position: absolute;
-    top: 5px;
-    margin: 2px 0;
-    left: 10px;
-    z-index: 1;
-}
 
 .gallery-container {
     width: 75vw;
