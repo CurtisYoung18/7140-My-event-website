@@ -1,9 +1,10 @@
 /* background setting*/
 body {
-    background-image:url('https://images.unsplash.com/photo-1625804626901-96baf3d57bc7?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=1945');
-    /* photo created by Daniel Leone, from https://unsplash.com */
+    background-image:url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2674&q=80");
+    /* photo created by David Marcu, from https://unsplash.com/photos/78A265wPiO4 */
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     height: 100vh;
 }
 

@@ -38,6 +38,13 @@ document.addEventListener('DOMContentLoaded', function() {
             modal.style.display = 'block';
             modalContent.style.display = 'block';  // Show the modal content
         });
+    
+    document.addEventListener('keydown', function(event) {
+        if (event.key === "Escape") {
+            closeModal();
+        }
+    });
+        
     });
     
     // Close the modal when clicking anywhere

@@ -3,10 +3,8 @@ body {
     background-image:url('../media/resource_background.jpg');
     /* photo created by David Marcu, from https://unsplash.com/photos/78A265wPiO4 */
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    padding: 0; /* remove default margin */
 }
 
 .card-container {
