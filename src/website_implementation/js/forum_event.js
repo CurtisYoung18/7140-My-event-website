@@ -36,10 +36,8 @@ const handleFileChange = () => {
 // submit
 const handleFormSubmit = event => {
     event.preventDefault();
-
     let formData = new FormData(event.target);
     formData.append("website_code", my_website_code);
-
     const requestOptions = {
         method: postCommunityEvnetMethod,
         body: formData,
@@ -141,7 +139,7 @@ const filterEventByTerm = (term) => {
 // chat-gpt define the delete function
 function deleteCardById(buttonElement) {
     const eventId = buttonElement.getAttribute('data-id');
-    const deleteUrl = `${baseURLCommunityEvents}${eventId}/`;
+    const deleteUrl = `${baseURLCommunityEvents}${eventId}`;
 
     console.log("Trying to delete event with ID:", eventId); // Log the event ID
     console.log("DELETE request URL:", deleteUrl); // Log the request URL
