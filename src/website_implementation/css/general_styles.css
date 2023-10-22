@@ -1,3 +1,4 @@
+/* Universal reset styles for all elements */
 *{
     margin: 0;
     padding: 0;
@@ -5,14 +6,17 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Style for list items */
 li {
-    list-style: none;
+    /* Remove default list styles (like bullet points) */
+    list-style: none; 
 }
 
 li:hover, .logo:hover {
     scale: 1.2;
 }
 
+/* Styles for anchor tags */
 a {
     text-decoration: none;
     color: #fff;
@@ -24,7 +28,7 @@ a:hover {
     scale: 1.2;
 }
 
-/* header */
+/* Styles for the header section */
 header {
     position: relative;
     padding: 0 2rem;
@@ -34,10 +38,10 @@ header {
     width: 100%;
     height: 60px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto; /* Center the navbar horizontally */
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between;  /* Space items evenly */
 }
 
 .navbar .logo a {
@@ -67,6 +71,7 @@ header {
     font-size: 0.8rem;
     font-weight: bold;
     cursor: pointer;
+    /* Add scaling transition effect */
     transition: scale 0.2 ease;
 }
 
@@ -89,10 +94,11 @@ header {
     width: 300px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
-    border-radius: 10px;
+    border-radius: 10px; /* Round the corners */
     overflow: hidden;
+    /* Add height transition effect for the expanding animation */
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: 1000; /* avoid overlap */
+    z-index: 1000;
 }
 
 .dropdown_menu.open {
@@ -102,7 +108,9 @@ header {
 .dropdown_menu li {
     padding: 0.7rem;
     display: flex;
+    /* Center items vertically */
     align-items: center;
+    /* Center items horizontally */
     justify-content: center;
 }
 
