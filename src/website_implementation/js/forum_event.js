@@ -17,6 +17,7 @@ const urlWithParams = baseURLCommunityEvents+"?"+queryString;
 
 /* global variables */
 let events_list;
+let photo
 
 /* constant functions */
 const triggerFileInput = () => {
@@ -25,7 +26,7 @@ const triggerFileInput = () => {
 
 const handleFileChange = () => {
     let fileName = photoFileInput.files[0].name;
-
+    photo = photoFileInput.files[0]
     if (fileName.length > 20) {
         fileName = fileName.substring(0, 17) + '...';
     }
@@ -38,6 +39,7 @@ const handleFormSubmit = event => {
     event.preventDefault();
     let formData = new FormData(event.target);
     formData.append("website_code", my_website_code);
+    formData.append("photo", photo)
     const requestOptions = {
         method: postCommunityEvnetMethod,
         body: formData,

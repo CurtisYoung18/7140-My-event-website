@@ -41,7 +41,7 @@ body {
 /*define the form */
 #subscribe-form {
     display: flex;    
-    flex-direction: column;   
+    flex-direction: column; /* vertical alignment */
     justify-content: space-between; 
     max-width: 300px;
     min-height: 400px;     
@@ -53,7 +53,7 @@ body {
 
 #subscribe-form > input {
     font-size: medium;
-    border: 1px solid #ced4da; /* border size and color */
+    border: 1px solid #ced4da;
     border-radius: .25rem; /* rounded corners*/
     border-color: #80bdff;
     transition: border-color .50s ease-in-out, box-shadow .30s ease-in-out; /* smooth transitions for hover/focus effects */
@@ -61,7 +61,7 @@ body {
 
 /* usability heuristic of visibility of system status */
 #subscribe-form > input:focus {
-    border-color: #80bdff; /* border color on focus */
+    border-color: #80bdff; 
     outline: 0; /* removes the default focus outline */
     box-shadow: 0 0 0 .2rem rgb(0, 123, 255, .25); /* adds a subtle glow effect on focus */
 
