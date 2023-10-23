@@ -16,14 +16,16 @@ const queryString = new URLSearchParams(queryParams).toString();
 const urlWithParams = baseURLCommunityEvents + "?" + queryString;
 
 /* global variables */
-let events_list;
-let photo
+let events_list; // to hold the list of fetched events
+let photo // to hold the selected photo
 
-/* constant functions */
+
+// trigger the photo file input click event
 const triggerFileInput = () => {
     photoFileInput.click();
 };
 
+// handle the change event when a photo file is selected
 const handleFileChange = () => {
     let fileName = photoFileInput.files[0].name;
     photo = photoFileInput.files[0]
@@ -31,6 +33,7 @@ const handleFileChange = () => {
         fileName = fileName.substring(0, 17) + '...';
     }
 
+    // Update the label text to show the selected file name
     photoFileInputLabel.textContent = fileName;
 };
 
@@ -46,6 +49,7 @@ const handleFormSubmit = event => {
         redirect: 'follow'
     }
 
+    // Make the POST request to add a new event
     fetch(baseURLCommunityEvents, requestOptions)
         .then(response => response.json().then(data => {
             if (!response.ok) {
@@ -70,7 +74,7 @@ const handleFormSubmit = event => {
         });
 };
 
-// render events after fetch or filter
+// render the fetched or filtered events to the DOM
 const renderEvents = (eventsToRender) => {
     while (eventsContainer.firstChild) {
         eventsContainer.removeChild(eventsContainer.firstChild);
@@ -93,7 +97,7 @@ const renderEvents = (eventsToRender) => {
     })
 }
 
-// fetching events from Community Events API
+// fetch events from the Community Events API
 const getCommunityEvents = () => {
     const queryParams = {
         website_code: my_website_code,
@@ -122,7 +126,7 @@ const getCommunityEvents = () => {
         });
 };
 
-// event filtering
+// filter events 
 const filterEventByTerm = (term) => {
     // if no term selected, show all events
     if (!term) {
@@ -134,7 +138,7 @@ const filterEventByTerm = (term) => {
     renderEvents(filteredEvents);
 }
 
-/* event listeners */
+// Attach event listeners
 photoFileInputLabel.addEventListener('click', triggerFileInput);
 photoFileInput.addEventListener('change', handleFileChange);
 eventForm.addEventListener("submit", handleFormSubmit);
@@ -143,5 +147,5 @@ filterDropdown.addEventListener('change', (e) => {
     filterEventByTerm(selectedTerm);
 });
 
-/* page setup on first load */
+// Fetch and display events when the page loads
 getCommunityEvents();
