@@ -9,8 +9,9 @@ body {
     padding: 0; /* remove default margin */
 }
 
-.community-title {
-    text-align: center;
+/* hightlight where we are */
+#community3 {
+    color: orange;
 }
 
 /* responsive grid for the main content */
@@ -75,7 +76,7 @@ body {
 }
 
 .card-header {
-    color: black;
+    color: #fff;
     font-weight: 600;
     font-size: larger;
 }
@@ -90,12 +91,12 @@ body {
 }
 
 .card-body-text {
-    color: black;
+    color: #fff;
 }
 
 /* event */
 label {
-    color: black;
+    color: #fff;
 }
 
 .form-group {
@@ -142,7 +143,7 @@ label {
 
 .btn-primary {
     background-color: var(--bloodred);
-    color: black;
+    color: #fff;
     font-size: larger;
 }
 
@@ -170,6 +171,10 @@ label {
 
 #photo-file-input {
     display: none;
+}
+
+.text-white {
+    color: antiquewhite;
 }
 
 /* width of the items in our grid-row */

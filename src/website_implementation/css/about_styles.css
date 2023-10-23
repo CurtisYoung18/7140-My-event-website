@@ -8,6 +8,11 @@ body {
     height: 100vh;
 }
 
+/* hightlight where we are */
+#about1 {
+    color: orange;
+}
+
 /* define the container */
 .about-container {
     font-size: larger;

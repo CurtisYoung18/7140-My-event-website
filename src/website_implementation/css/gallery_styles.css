@@ -7,6 +7,10 @@ body {
     background-attachment: fixed;
 }
 
+/* hightlight where we are */
+#gallery2 {
+    color: orange;
+}
 
 .gallery-container {
     width: 75vw;

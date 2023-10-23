@@ -7,6 +7,11 @@ body {
     height: 100vh;
 }
 
+/* hightlight where we are */
+.logo a {
+    color: orange;
+}
+
 /* slogan */
 #slogan {
     height: calc(100vh - 60px);

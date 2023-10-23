@@ -134,6 +134,16 @@ header {
 
     .dropdown_menu {
         display: block;
+        width: 600px;
+    }
+
+    .dropdown_menu a {
+        color: black;
+        text-decoration: bold;
+    } 
+
+    .dropdown_menu a:hover {
+        color: antiquewhite;
     }
 }
     
@@ -144,3 +154,4 @@ header {
         width: unset;
     }
 }
+
