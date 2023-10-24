@@ -44,11 +44,18 @@ document.addEventListener('DOMContentLoaded', function() {
             modal.style.display = 'block';
             modalContent.style.display = 'block';
         });
-    
+        
+        // Close the modal when the 'Escape' key is pressed
         document.addEventListener('keydown', function(event) {
-            // If the 'Escape' key is pressed, close the modal
             if (event.key === "Escape") {
                 closeModal();
+            }
+        });
+
+        // Open the modal when the 'Enter' or 'Space' key is pressed on an image
+        item.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter' || event.key === ' ') {
+                item.click();
             }
         });
     });
